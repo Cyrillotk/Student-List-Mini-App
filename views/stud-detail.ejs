@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= student.name %> — Student Detail</title>
+  <%- include('partials-style') %>
+</head>
+<body>
+
+  <h1><%= student.name %></h1>
+
+  <div class="card">
+    <p><strong>ID:</strong> <%= student.id %></p>
+    <p><strong>Course:</strong> <%= student.course %></p>
+    <p><strong>Year:</strong> <%= student.year %></p>
+  </div>
+
+  <a class="back-link" href="/students">&larr; Back to all students</a>
+
+</body>
+</html>

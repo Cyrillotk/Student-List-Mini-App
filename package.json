@@ -1,0 +1,20 @@
+{
+  "name": "stud_list",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000S\u0000t\u0000u\u0000d\u0000e\u0000n\u0000t\u0000-\u0000L\u0000i\u0000s\u0000t\u0000-\u0000M\u0000i\u0000n\u0000i\u0000-\u0000A\u0000p\u0000p\u0000\r\u0000 \u0000",
+  "homepage": "https://github.com/Cyrillotk/Student-List-Mini-App#readme",
+  "bugs": {
+    "url": "https://github.com/Cyrillotk/Student-List-Mini-App/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyrillotk/Student-List-Mini-App.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

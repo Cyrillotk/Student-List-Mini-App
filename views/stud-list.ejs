@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students</title>
+  <%- include('partials-style') %>
+</head>
+<body>
+
+  <h1>Students</h1>
+
+  <% if (students.length === 0) { %>
+    <p>No students yet. Add one below!</p>
+  <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Year</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% students.forEach(function(student) { %>
+          <tr>
+            <td><%= student.name %></td>
+            <td><%= student.course %></td>
+            <td><%= student.year %></td>
+            <td><a href="/students/<%= student.id %>">View</a></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } %>
+
+  <a class="btn" href="/students/new">+ Add New Student</a>
+
+</body>
+</html>
