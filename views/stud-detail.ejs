@@ -1,21 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title><%= student.name %> — Student Detail</title>
-  <%- include('partials-style') %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    <%= student.name %> — Student Detail
+  </title>
+
+  <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
 
-  <h1><%= student.name %></h1>
+  <div class="detail-container">
 
-  <div class="card">
-    <p><strong>ID:</strong> <%= student.id %></p>
-    <p><strong>Course:</strong> <%= student.course %></p>
-    <p><strong>Year:</strong> <%= student.year %></p>
+    <h1>
+      <%= student.name %>
+    </h1>
+
+    <div class="student-card">
+
+      <p>
+        <strong>ID:</strong>
+        <%= student._id %>
+      </p>
+
+      <p>
+        <strong>Name:</strong>
+        <%= student.name %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= student.email %>
+      </p>
+
+      <p>
+        <strong>Age:</strong>
+        <%= student.age %>
+      </p>
+
+      <p>
+        <strong>Course:</strong>
+        <%= student.course %>
+      </p>
+
+    </div>
+
+    <div class="actions">
+
+      <a class="edit" href="/students/<%= student._id %>/edit">
+        Edit Student
+      </a>
+
+      <form action="/students/<%= student._id %>/delete" method="POST">
+
+        <button type="submit" class="delete" onclick="return confirm('Are you sure you want to delete this student?')">
+          Delete Student
+        </button>
+
+      </form>
+
+    </div>
+
+    <br>
+
+    <a class="back" href="/students">
+      &larr; Back to all students
+    </a>
+
   </div>
 
-  <a class="back-link" href="/students">&larr; Back to all students</a>
-
 </body>
+
 </html>
